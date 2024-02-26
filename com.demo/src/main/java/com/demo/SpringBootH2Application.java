@@ -1,0 +1,13 @@
+package com.demo;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+//@PropertySource("classpath:application-h2.properties")
+public class SpringBootH2Application {
+
+    public static void main(String... args) {
+        SpringApplication.run(SpringBootH2Application.class, args);
+    }
+}
