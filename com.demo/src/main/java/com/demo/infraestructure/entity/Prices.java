@@ -37,7 +37,7 @@ public class Prices {
 	private Integer productId;
 	
 	@Column(name = "PRIORITY")
-	private boolean priority;
+	private Integer priority;
 	
 	@Column(name = "PRICE")
 	private BigDecimal price;
