@@ -18,7 +18,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "PRICES")
-public class Prices {
+public class Prices{
 
 	@Id
 	@Column(name = "BRAND_ID", unique = true, nullable = false)

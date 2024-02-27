@@ -4,6 +4,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import com.demo.application.exception.MalformedException;
 import com.demo.application.response.PricesResponse;
 import com.demo.infraestructure.entity.Prices;
 
@@ -17,7 +18,7 @@ public class Mapper {
 			dateResponse = formatter.parse(date);
 		} catch (ParseException e) {
 
-			return null;
+			 throw new MalformedException();
 		}
 		return dateResponse;
 		
