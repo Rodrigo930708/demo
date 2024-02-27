@@ -22,12 +22,12 @@ public class PricesController {
 	private PricesService pricesService;
 	
 	@GetMapping("/read")
-	private List<Prices> getAllPrices() {
+	public List<Prices> getAllPrices() {
 		return pricesService.getAll();
 	}
 	
 	@PostMapping("/read-by-parameters")
-	private PricesResponse findByDateProductAndGroup(@RequestBody PricesRequest request) {
+	public PricesResponse findByDateProductAndGroup(@RequestBody PricesRequest request) {
 		return pricesService.findByDateProductAndGroup(request);
 	}
 }

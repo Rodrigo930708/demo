@@ -25,12 +25,15 @@ public class PricesService {
 	private PricesRepository pricesRepository;
 	
 	public List<Prices> getAll() {
-		
+
 		List<Prices> prices = new ArrayList<Prices>();
 		pricesRepository.findAll().forEach(pricesEt -> prices.add(pricesEt));
 
+		if (ObjectUtils.isEmpty(prices)) {
+			throw new NoDataFoundException();
+		}
 		return prices;
-		
+
 	}
 	public PricesResponse findByDateProductAndGroup(PricesRequest request) {
 		this.validateParameters(request);
